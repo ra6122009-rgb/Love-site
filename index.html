@@ -46,15 +46,14 @@
 
   <h1>My Memories With You 💕</h1>
 
-  <!-- كود الأغنية يوتيوب -->
-  <iframe 
-    width="0"
-    height="0"
-    src="https://www.youtube.com/embed/SKfi0V8NRhQ?autoplay=1&loop=1&playlist=SKfi0V8NRhQ"
-    frameborder="0"
-    allow="autoplay; encrypted-media"
-    allowfullscreen>
-  </iframe>
+  <!-- زر لتشغيل/إيقاف الأغنية -->
+  <button onclick="toggleAudio()">تشغيل/إيقاف الأغنية 🎵</button>
+
+  <!-- مشغل الأغنية -->
+  <audio id="myAudio" loop>
+    <source src="myaudio.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
 
   <p>
     مش عارفة اقول ايه ولا مرتبة كلام بس انت بجد غيرتلي حياتي 
@@ -65,7 +64,6 @@
 "مش مهم الي حصل في النص"
 30/8/2025 صالحتني و عرفت كل حاجة و رجعت احبك اكتر من الاول💕
 2026 سنة العوض الجميل بالنسبالي 
-    هفضل مستنية اليوم الي ربنا هيجمعنا فيه في حلاله و نكون في بيت واحد 🌎❤❤❤
 بحبك يا احلى حاجة حصلت في حياتي 🌎💕💕
 "You are the most important person in my life, and there is no one after you, not even your heart, my love. 🫂❤❤"
   </p>
@@ -81,6 +79,16 @@ function check() {
     document.getElementById("msg").innerHTML = "";
   } else {
     document.getElementById("msg").innerHTML = "❌ Wrong Password";
+  }
+}
+
+// تشغيل/إيقاف الأغنية
+function toggleAudio() {
+  var audio = document.getElementById("myAudio");
+  if (audio.paused) {
+    audio.play();
+  } else {
+    audio.pause();
   }
 }
 </script>
