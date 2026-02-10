@@ -4,7 +4,7 @@
   <title>Our Story ❤️</title>
   <meta charset="UTF-8">
 
-  <!-- خط رومانسي من Google Fonts -->
+  <!-- خطوط رومانسية -->
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto&display=swap" rel="stylesheet">
 
   <style>
@@ -40,17 +40,15 @@
       margin-top: 20px;
     }
 
-    /* تحسين الخط والمسافات */
     #content p {
       font-size: 20px;
       line-height: 1.6;
       margin-bottom: 15px;
       text-align: center;
-      opacity: 0; /* البداية مخفية للتأثير */
+      opacity: 0;
       animation: fadeIn 2s forwards;
     }
 
-    /* تأثير تدريجي على ظهور الكلام */
     @keyframes fadeIn {
       to { opacity: 1; }
     }
@@ -61,14 +59,27 @@
       color: #ff2d70;
     }
 
-    /* زر تفاعلي صغير */
+    /* زر تفاعلي */
     #surpriseBtn {
       background: #ff8fc1;
       margin-top: 20px;
     }
-
     #surpriseBtn:hover {
       background: #ff5c8a;
+    }
+
+    /* صندوق الرسالة الجميلة */
+    #surpriseMessage {
+      display: none;
+      margin: 15px auto;
+      padding: 20px;
+      background: #fff0f5;
+      border: 2px solid #ff5c8a;
+      border-radius: 12px;
+      font-size: 18px;
+      line-height: 1.5;
+      max-width: 600px;
+      color: #ff2d70;
     }
 
   </style>
@@ -97,7 +108,7 @@
     Your browser does not support the audio element.
   </audio>
 
-  <!-- الكلام مرتب في فقرات مع تأثير fadeIn -->
+  <!-- الكلام -->
   <p>مش عارفة اقول ايه ولا مرتبة كلام بس انت بجد غيرتلي حياتي.</p>
   <p>حسيت اني اتولدت من تاني حبك و حنيتك و خوفك عليا عندي بالدنيا كلها.</p>
   <p>بحب ضحكتك و عيونك بحسك جزء مني معرفش ليه بس انت بقيت الـ Fav person who I loved من ساعة ما دخلت حياتي.</p>
@@ -111,8 +122,13 @@
   <p>بحبك يا احلى حاجة حصلت في حياتي 🌎💕💕</p>
   <p>"You are the most important person in my life, and there is no one after you, not even your heart, my love. 🫂❤❤"</p>
 
-  <!-- زر تفاعلي يطلع رسالة -->
+  <!-- زر تفاعلي -->
   <button id="surpriseBtn" onclick="showSurprise()">اقرأ رسالتي لك 💌</button>
+
+  <!-- صندوق الرسالة -->
+  <div id="surpriseMessage">
+    هفضل طول عمري بدعي ربنا لحد ما يجمعنا في حلاله في بيت واحد و عمري ما هزهق هستناك على طول عشان انت حبيب عيوني 💖🤍
+  </div>
 
 </div>
 
@@ -125,7 +141,7 @@ function check() {
     document.getElementById("content").style.display = "block";
     document.getElementById("msg").innerHTML = "";
 
-    // تفعيل التأثير التدريجي لكل فقرة
+    // تأثير تدريجي لكل فقرة
     var paragraphs = document.querySelectorAll("#content p");
     paragraphs.forEach((p, i) => {
       p.style.animationDelay = (i * 0.5) + "s";
@@ -146,10 +162,14 @@ function toggleAudio() {
   }
 }
 
-// زر تفاعلي يطلع رسالة
+// زر تفاعلي يطلع الرسالة
 function showSurprise() {
-  alert(" هفضل طول عمري بدعي ربنا لحد ما يجمعنا في حلاله في بيت واحد و مش هزهق 
-       ❤❤🌎 هستناك على طول يا حبيب عيوني ");
+  var msg = document.getElementById("surpriseMessage");
+  if (msg.style.display === "none") {
+    msg.style.display = "block";
+  } else {
+    msg.style.display = "none";
+  }
 }
 </script>
 
