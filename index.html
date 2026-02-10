@@ -3,12 +3,17 @@
 <head>
   <title>Our Story ❤️</title>
   <meta charset="UTF-8">
+
+  <!-- خط رومانسي من Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto&display=swap" rel="stylesheet">
+
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Roboto', sans-serif;
       text-align: center;
-      background: #ffe6f0;
+      background: linear-gradient(to bottom, #ffe6f0, #ffd1e0);
       padding: 30px;
+      color: #333;
     }
 
     input, button {
@@ -23,6 +28,11 @@
       background: #ff5c8a;
       color: white;
       cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #ff2d70;
     }
 
     #content {
@@ -36,7 +46,31 @@
       line-height: 1.6;
       margin-bottom: 15px;
       text-align: center;
+      opacity: 0; /* البداية مخفية للتأثير */
+      animation: fadeIn 2s forwards;
     }
+
+    /* تأثير تدريجي على ظهور الكلام */
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 50px;
+      color: #ff2d70;
+    }
+
+    /* زر تفاعلي صغير */
+    #surpriseBtn {
+      background: #ff8fc1;
+      margin-top: 20px;
+    }
+
+    #surpriseBtn:hover {
+      background: #ff5c8a;
+    }
+
   </style>
 </head>
 
@@ -63,7 +97,7 @@
     Your browser does not support the audio element.
   </audio>
 
-  <!-- الكلام مرتب في فقرات -->
+  <!-- الكلام مرتب في فقرات مع تأثير fadeIn -->
   <p>مش عارفة اقول ايه ولا مرتبة كلام بس انت بجد غيرتلي حياتي.</p>
   <p>حسيت اني اتولدت من تاني حبك و حنيتك و خوفك عليا عندي بالدنيا كلها.</p>
   <p>بحب ضحكتك و عيونك بحسك جزء مني معرفش ليه بس انت بقيت الـ Fav person who I loved من ساعة ما دخلت حياتي.</p>
@@ -77,6 +111,9 @@
   <p>بحبك يا احلى حاجة حصلت في حياتي 🌎💕💕</p>
   <p>"You are the most important person in my life, and there is no one after you, not even your heart, my love. 🫂❤❤"</p>
 
+  <!-- زر تفاعلي يطلع رسالة -->
+  <button id="surpriseBtn" onclick="showSurprise()">اقرأ رسالتي لك 💌</button>
+
 </div>
 
 <script>
@@ -87,6 +124,13 @@ function check() {
   if (input === password) {
     document.getElementById("content").style.display = "block";
     document.getElementById("msg").innerHTML = "";
+
+    // تفعيل التأثير التدريجي لكل فقرة
+    var paragraphs = document.querySelectorAll("#content p");
+    paragraphs.forEach((p, i) => {
+      p.style.animationDelay = (i * 0.5) + "s";
+    });
+
   } else {
     document.getElementById("msg").innerHTML = "❌ Wrong Password";
   }
@@ -100,6 +144,11 @@ function toggleAudio() {
   } else {
     audio.pause();
   }
+}
+
+// زر تفاعلي يطلع رسالة
+function showSurprise() {
+  alert("بحبك يا حياتي 💖🌸 كل يوم معاك أحلى يوم في حياتي!");
 }
 </script>
 
