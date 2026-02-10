@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>For You ❤️</title>
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      margin-top: 100px;
+      background: #ffe6f0;
+    }
+    input, button {
+      padding: 10px;
+      font-size: 16px;
+      margin: 5px;
+    }
+  </style>
+</head>
+
+<body>
+
+<h2>💗 Enter The Password 💗</h2>
+
+<input type="password" id="pass" placeholder="Password">
+<br>
+<button onclick="check()">Open</button>
+
+<p id="msg"></p>
+
+<div id="content" style="display:none;">
+  <h1>My Memories With You 💕</h1>
+  <p>
+    مش عارفة اقول ايه ولا مرتبة كلام بس انت بجد غيرتلي حياتي 
+حسيت اني اتولدت من تاني حبك و حنيتك و خوفك عليا عندي بالدنيا كلها بحب ضحكتك و عيونك بحسك جزء مني معرفش ليه بس انت بقيت الـ Fav person who I loved من ساعة ما دخلت حياتي يومي كله بقى ليك دماغي مش بتفكر غير فيك غيرت جوايا حاجات كتيرة اوي يمكن انت متاخدش بالك منها بس بجد انت بالنسبالي مهم اوي كنت الـ Hero بالنسبالي وانت بتلحقني من دماغي، كنت بتطمني وانا خايفة، غريبة!  انا مفيش حد بيعرف يطمني ولا يكون قريب مني كل ده! 
+بس معاك كل حاجة اتغيرت بقيت احسن 
+23/12/2023 كان يوم اعترافك ليا مش قادرة اوصف شعوري وقتها بس حرفيًا كان احلى يوم بالنسبالي 🩷
+3/1/2024 كانت اول مرة اكلمك كول و كان احلى كول❤️‍🩹
+"مش مهم الي حصل في النص"
+30/8/2025 صالحتني و عرفت كل حاجة و رجعت احبك اكتر من الاول💕
+2026 سنة العوض الجميل بالنسبالي 
+بحبك يا احلى حاجة حصلت في حياتي 🌎💕💕
+"You are the most important person in my life, and there is no one after you, not even your heart, my love. 🫂❤❤" 
+
+
+  </p>
+</div>
+
+<script>
+function check() {
+  var password = "Our story since 2023"; // 
+  var input = document.getElementById("pass").value;
+
+  if (input === password) {
+    document.getElementById("content").style.display = "block";
+    document.getElementById("msg").innerHTML = "";
+  } else {
+    document.getElementById("msg").innerHTML = "❌ Wrong Password";
+  }
+}
+</script>
+
+</body>
+</html>
