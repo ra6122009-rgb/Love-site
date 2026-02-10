@@ -1,25 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>For You ❤️</title>
+  <title>Our Story ❤️</title>
+  <meta charset="UTF-8">
   <style>
     body {
       font-family: Arial;
       text-align: center;
-      margin-top: 100px;
       background: #ffe6f0;
+      padding: 30px;
     }
+
     input, button {
       padding: 10px;
       font-size: 16px;
       margin: 5px;
+      border-radius: 8px;
+      border: none;
+    }
+
+    button {
+      background: #ff5c8a;
+      color: white;
+      cursor: pointer;
+    }
+
+    #content {
+      display: none;
+      margin-top: 20px;
     }
   </style>
 </head>
 
 <body>
 
-<h2>💗 Enter The Password 💗</h2>
+<h2>💗 Enter Password 💗</h2>
 
 <input type="password" id="pass" placeholder="Password">
 <br>
@@ -27,8 +42,20 @@
 
 <p id="msg"></p>
 
-<div id="content" style="display:none;">
+<div id="content">
+
   <h1>My Memories With You 💕</h1>
+
+  <!-- كود الأغنية يوتيوب -->
+  <iframe 
+    width="0"
+    height="0"
+    src="https://www.youtube.com/embed/SKfi0V8NRhQ?autoplay=1&loop=1&playlist=SKfi0V8NRhQ"
+    frameborder="0"
+    allow="autoplay; encrypted-media"
+    allowfullscreen>
+  </iframe>
+
   <p>
     مش عارفة اقول ايه ولا مرتبة كلام بس انت بجد غيرتلي حياتي 
 حسيت اني اتولدت من تاني حبك و حنيتك و خوفك عليا عندي بالدنيا كلها بحب ضحكتك و عيونك بحسك جزء مني معرفش ليه بس انت بقيت الـ Fav person who I loved من ساعة ما دخلت حياتي يومي كله بقى ليك دماغي مش بتفكر غير فيك غيرت جوايا حاجات كتيرة اوي يمكن انت متاخدش بالك منها بس بجد انت بالنسبالي مهم اوي كنت الـ Hero بالنسبالي وانت بتلحقني من دماغي، كنت بتطمني وانا خايفة، غريبة!  انا مفيش حد بيعرف يطمني ولا يكون قريب مني كل ده! 
@@ -38,16 +65,15 @@
 "مش مهم الي حصل في النص"
 30/8/2025 صالحتني و عرفت كل حاجة و رجعت احبك اكتر من الاول💕
 2026 سنة العوض الجميل بالنسبالي 
+    هفضل مستنية اليوم الي ربنا هيجمعنا فيه في حلاله و نكون في بيت واحد 🌎❤❤❤
 بحبك يا احلى حاجة حصلت في حياتي 🌎💕💕
-"You are the most important person in my life, and there is no one after you, not even your heart, my love. 🫂❤❤" 
-
-
+"You are the most important person in my life, and there is no one after you, not even your heart, my love. 🫂❤❤"
   </p>
 </div>
 
 <script>
 function check() {
-  var password = "Our story since 2023"; // 
+  var password = "Our story Since 2023";
   var input = document.getElementById("pass").value;
 
   if (input === password) {
